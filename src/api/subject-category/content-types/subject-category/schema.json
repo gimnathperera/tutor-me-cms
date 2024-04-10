@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subject_categories",
+  "info": {
+    "singularName": "subject-category",
+    "pluralName": "subject-categories",
+    "displayName": "SubjectCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "subject_categories"
+    }
+  }
+}

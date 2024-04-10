@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Subject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subject_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject-category.subject-category",
+      "inversedBy": "subjects"
+    }
+  }
+}
